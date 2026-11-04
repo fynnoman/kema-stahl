@@ -14,7 +14,7 @@ export default function UnternehmenPage() {
   return (
     <>
       {/* HERO with image */}
-      <section className="relative overflow-hidden h-[70vh] min-h-[480px]">
+      <section className="relative overflow-hidden h-[70vh] min-h-[440px] md:min-h-[520px]">
         <Image
           src="/images/construction-team.jpg"
           alt="Das Team von KeMa-Stahl"
@@ -26,13 +26,13 @@ export default function UnternehmenPage() {
         <div className="absolute inset-0 image-gradient-full" />
 
         <div className="relative z-10 h-full flex flex-col justify-end">
-          <div className="mx-auto max-w-[1440px] w-full px-5 md:px-10 pb-16 md:pb-20 text-paper">
-            <div className="flex items-center gap-4">
+          <div className="mx-auto max-w-[1440px] w-full px-5 md:px-10 pb-12 md:pb-20 text-paper">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
               <span className="mono-tag text-paper/75">Unternehmen</span>
-              <span className="h-px w-16 bg-paper/40" />
+              <span className="hidden sm:inline-block h-px w-16 bg-paper/40" />
               <span className="mono-tag text-paper/75">Gegründet 1996</span>
             </div>
-            <h1 className="display-serif mt-8 text-paper text-[3rem] sm:text-[4.6rem] md:text-[7rem] lg:text-[8.6rem] leading-[0.95] max-w-[16ch]">
+            <h1 className="fluid-hero-serif-sm display-serif mt-6 md:mt-8 text-paper max-w-[16ch]">
               Aus 40 m² Garage<br />
               <span className="italic">wurde ein Werk.</span>
             </h1>
@@ -220,11 +220,11 @@ export default function UnternehmenPage() {
                 <span className="italic">Team kennen.</span>
               </h2>
             </div>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/kontakt" className="btn-primary !bg-paper !text-navy hover:!bg-paper-2">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 w-full md:w-auto">
+              <Link href="/kontakt" className="btn-primary !bg-paper !text-navy hover:!bg-paper-2 w-full sm:w-auto justify-center sm:justify-start">
                 Ansprechpartner <span>→</span>
               </Link>
-              <Link href="/leistungen" className="btn-ghost border-paper/40 !text-paper hover:border-paper hover:bg-paper/10">
+              <Link href="/leistungen" className="btn-ghost border-paper/40 !text-paper hover:border-paper hover:bg-paper/10 w-full sm:w-auto justify-center sm:justify-start">
                 Leistungen
               </Link>
             </div>

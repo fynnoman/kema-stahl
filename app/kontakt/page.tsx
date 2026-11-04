@@ -13,7 +13,7 @@ export default function KontaktPage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden h-[62vh] min-h-[440px]">
+      <section className="relative overflow-hidden h-[62vh] min-h-[420px] md:min-h-[480px]">
         <Image
           src="/images/handshake.jpg"
           alt="Persönliche Zusammenarbeit"
@@ -24,13 +24,13 @@ export default function KontaktPage() {
         />
         <div className="absolute inset-0 image-gradient-full" />
         <div className="relative z-10 h-full flex flex-col justify-end">
-          <div className="mx-auto max-w-[1440px] w-full px-5 md:px-10 pb-16 md:pb-20 text-paper">
-            <div className="flex items-center gap-4">
+          <div className="mx-auto max-w-[1440px] w-full px-5 md:px-10 pb-12 md:pb-20 text-paper">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
               <span className="mono-tag text-paper/75">Kontakt</span>
-              <span className="h-px w-16 bg-paper/40" />
+              <span className="hidden sm:inline-block h-px w-16 bg-paper/40" />
               <span className="mono-tag text-paper/75">Werk & Verwaltung</span>
             </div>
-            <h1 className="display-serif mt-8 text-paper text-[3rem] sm:text-[4.6rem] md:text-[7rem] lg:text-[8.6rem] leading-[0.95] max-w-[14ch]">
+            <h1 className="fluid-hero-serif-sm display-serif mt-6 md:mt-8 text-paper max-w-[14ch]">
               Hier finden<br />
               <span className="italic">Sie uns.</span>
             </h1>
@@ -147,7 +147,7 @@ export default function KontaktPage() {
                 )}`}
                 target="_blank"
                 rel="noopener"
-                className="btn-primary mt-8"
+                className="btn-primary mt-8 w-full sm:w-auto justify-center sm:justify-start"
               >
                 In Google Maps öffnen <span>→</span>
               </a>

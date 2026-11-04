@@ -64,7 +64,7 @@ export default function LeistungenPage() {
   return (
     <>
       {/* ============ HERO with image ============ */}
-      <section className="relative overflow-hidden h-[70vh] min-h-[480px]">
+      <section className="relative overflow-hidden h-[70vh] min-h-[440px] md:min-h-[520px]">
         <Image
           src="/images/grinder-sparks.jpg"
           alt="Fertigung bei KeMa-Stahl"
@@ -76,13 +76,13 @@ export default function LeistungenPage() {
         <div className="absolute inset-0 image-gradient-full" />
 
         <div className="relative z-10 h-full flex flex-col justify-end">
-          <div className="mx-auto max-w-[1440px] w-full px-5 md:px-10 pb-16 md:pb-20 text-paper">
-            <div className="flex items-center gap-4 fade-up">
+          <div className="mx-auto max-w-[1440px] w-full px-5 md:px-10 pb-12 md:pb-20 text-paper">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-2 fade-up">
               <span className="mono-tag text-paper/75">Leistungen</span>
-              <span className="h-px w-16 bg-paper/40" />
+              <span className="hidden sm:inline-block h-px w-16 bg-paper/40" />
               <span className="mono-tag text-paper/75">Fünf Disziplinen · Ein Werk</span>
             </div>
-            <h1 className="display-serif mt-8 text-paper text-[3rem] sm:text-[4.6rem] md:text-[7rem] lg:text-[8.6rem] leading-[0.95] max-w-[18ch]">
+            <h1 className="fluid-hero-serif-sm display-serif mt-6 md:mt-8 text-paper max-w-[18ch]">
               Was aus unserem<br />
               <span className="italic">Werk kommt.</span>
             </h1>
@@ -93,9 +93,11 @@ export default function LeistungenPage() {
       {/* ============ Intro ============ */}
       <section className="bg-paper py-20 md:py-28">
         <div className="mx-auto max-w-[1440px] px-5 md:px-10">
-          <div className="grid grid-cols-12 gap-10">
+          <div className="grid grid-cols-12 gap-6 md:gap-10">
             <div className="col-span-12 lg:col-span-5">
-              <div className="mono-tag text-navy">Beratung · Planung · Fertigung · Montage</div>
+              <div className="mono-tag text-navy break-safe">
+                Beratung · Planung<br className="sm:hidden" /> · Fertigung · Montage
+              </div>
             </div>
             <p className="col-span-12 lg:col-span-7 text-ink text-lg md:text-xl leading-relaxed">
               Geländer, Treppen und Balkonanlagen gehören zum täglichen Geschäft. Komplette Hallen- und Dachkonstruktionen ebenso. Jedes Bauteil wird bei uns konstruiert, gefertigt und montiert.

@@ -14,7 +14,7 @@ export default function JobsPage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden h-[70vh] min-h-[480px]">
+      <section className="relative overflow-hidden h-[70vh] min-h-[440px] md:min-h-[520px]">
         <Image
           src="/images/warehouse-aisle.jpg"
           alt="Werkhalle Sirzenich"
@@ -25,13 +25,13 @@ export default function JobsPage() {
         />
         <div className="absolute inset-0 image-gradient-full" />
         <div className="relative z-10 h-full flex flex-col justify-end">
-          <div className="mx-auto max-w-[1440px] w-full px-5 md:px-10 pb-16 md:pb-20 text-paper">
-            <div className="flex items-center gap-4">
+          <div className="mx-auto max-w-[1440px] w-full px-5 md:px-10 pb-12 md:pb-20 text-paper">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
               <span className="mono-tag text-paper/75">Jobs</span>
-              <span className="h-px w-16 bg-paper/40" />
+              <span className="hidden sm:inline-block h-px w-16 bg-paper/40" />
               <span className="mono-tag text-paper/75">Werk Sirzenich · Trierweiler</span>
             </div>
-            <h1 className="display-serif mt-8 text-paper text-[3rem] sm:text-[4.6rem] md:text-[7rem] lg:text-[8.6rem] leading-[0.95] max-w-[14ch]">
+            <h1 className="fluid-hero-serif-sm display-serif mt-6 md:mt-8 text-paper max-w-[14ch]">
               Werden Sie<br />
               <span className="italic">Teil der Halle.</span>
             </h1>

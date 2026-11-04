@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <>
       {/* ====================== HERO — full-bleed image ====================== */}
-      <section className="relative h-[100svh] min-h-[640px] w-full overflow-hidden">
+      <section className="relative h-[100svh] min-h-[560px] w-full overflow-hidden">
         <Image
           src={HERO_IMG}
           alt="Schweißer in der KeMa-Werkhalle"
@@ -22,26 +22,26 @@ export default function HomePage() {
         <div className="absolute inset-0 blueprint-grid opacity-[0.07]" aria-hidden="true" />
 
         <div className="relative z-10 h-full flex flex-col justify-end">
-          <div className="mx-auto max-w-[1440px] w-full px-5 md:px-10 pb-16 md:pb-24">
+          <div className="mx-auto max-w-[1440px] w-full px-5 md:px-10 pb-12 md:pb-24">
             <div className="grid grid-cols-12 gap-6 md:gap-10 items-end">
               <div className="col-span-12 lg:col-span-9 text-paper">
-                <div className="flex items-center gap-4 fade-up">
-                  <span className="mono-tag text-paper/75">Schlosserei · Metall- & Stahlbau</span>
-                  <span className="h-px w-16 bg-paper/40" />
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-2 fade-up">
+                  <span className="mono-tag text-paper/75">Metall- & Stahlbau</span>
+                  <span className="hidden sm:inline-block h-px w-16 bg-paper/40" />
                   <span className="mono-tag text-paper/75">Seit 1996</span>
                 </div>
-                <h1 className="display-serif mt-8 text-paper text-[3.6rem] sm:text-[5.2rem] md:text-[7.4rem] lg:text-[9rem] leading-[0.92]">
+                <h1 className="fluid-hero-serif display-serif mt-6 md:mt-8 text-paper">
                   Wir fertigen<br />
                   Stahl, der <span className="italic">bleibt.</span>
                 </h1>
-                <p className="mt-10 text-paper/85 text-lg md:text-xl leading-relaxed max-w-[62ch]">
+                <p className="mt-6 md:mt-10 text-paper/85 text-base md:text-xl leading-relaxed max-w-full md:max-w-[62ch]">
                   Planung, Konstruktion und Montage für Geländer, Treppen, Balkonanlagen, Vordächer, Hallen- und Dachkonstruktionen. Aus einer Hand. Aus Trierweiler.
                 </p>
-                <div className="mt-10 flex flex-wrap items-center gap-4">
-                  <Link href="/kontakt" className="btn-primary !bg-paper !text-navy hover:!bg-paper-2">
+                <div className="mt-8 md:mt-10 flex flex-col sm:flex-row flex-wrap sm:items-center gap-3 md:gap-4">
+                  <Link href="/kontakt" className="btn-primary !bg-paper !text-navy hover:!bg-paper-2 w-full sm:w-auto justify-center sm:justify-start">
                     Projekt besprechen <span>→</span>
                   </Link>
-                  <Link href="/leistungen" className="btn-ghost border-paper/40 !text-paper hover:border-paper hover:bg-paper/10">
+                  <Link href="/leistungen" className="btn-ghost border-paper/40 !text-paper hover:border-paper hover:bg-paper/10 w-full sm:w-auto justify-center sm:justify-start">
                     Leistungen ansehen
                   </Link>
                 </div>
@@ -62,10 +62,10 @@ export default function HomePage() {
 
           {/* bottom marker */}
           <div className="relative border-t border-paper/15">
-            <div className="mx-auto max-w-[1440px] px-5 md:px-10 py-4 flex items-center justify-between text-paper/60 text-xs tracking-wider font-mono">
-              <span>01 / HERO · KEMA-STAHL</span>
-              <span className="hidden sm:inline">Werk Sirzenich · 54311 Trierweiler</span>
-              <span>▾ Scroll</span>
+            <div className="mx-auto max-w-[1440px] px-4 md:px-10 py-3 md:py-4 flex items-center justify-between gap-3 text-paper/60 text-[0.6rem] md:text-xs tracking-wider font-mono">
+              <span className="truncate">01 / HERO</span>
+              <span className="hidden sm:inline truncate">Werk Sirzenich · 54311 Trierweiler</span>
+              <span className="shrink-0">▾ Scroll</span>
             </div>
           </div>
         </div>
@@ -215,7 +215,7 @@ export default function HomePage() {
           </div>
 
           <div className="mt-14 flex justify-center">
-            <Link href="/leistungen" className="btn-primary">
+            <Link href="/leistungen" className="btn-primary w-full sm:w-auto justify-center sm:justify-start">
               Alle Leistungen im Detail <span>→</span>
             </Link>
           </div>
@@ -508,11 +508,11 @@ export default function HomePage() {
               <p className="mt-8 text-mute text-lg leading-relaxed max-w-[48ch]">
                 Ob einzelnes Geländer oder komplette Hallenkonstruktion, rufen Sie uns an oder schreiben Sie uns. Beratung ist der erste Schritt, nicht die Rechnung.
               </p>
-              <div className="mt-10 flex flex-wrap gap-4">
-                <a href={`tel:${SITE.contact.phoneRaw}`} className="btn-primary">
-                  {SITE.contact.phone} <span>→</span>
+              <div className="mt-10 flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4">
+                <a href={`tel:${SITE.contact.phoneRaw}`} className="btn-primary w-full sm:w-auto justify-center sm:justify-start break-safe text-center">
+                  <span className="truncate">{SITE.contact.phone}</span> <span>→</span>
                 </a>
-                <Link href="/kontakt" className="btn-ghost">
+                <Link href="/kontakt" className="btn-ghost w-full sm:w-auto justify-center sm:justify-start">
                   Kontaktseite öffnen
                 </Link>
               </div>
